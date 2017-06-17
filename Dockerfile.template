@@ -29,9 +29,10 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   bluez \
   libbluetooth-dev \
   libudev-dev \
-  bluez-firmware && \
+  bluez-firmware \
+  libexpat-dev && \
   apt-get clean && \
-  libexpat-dev && rm -rf /var/lib/apt/lists/*
+  rm -rf /var/lib/apt/lists/*
 
 # Set Xorg and FLUXBOX preferences
 RUN mkdir ~/.fluxbox
