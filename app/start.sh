@@ -6,6 +6,9 @@ export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 mkdir -p /data/node-red/user/lib/flows || true
 cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 
+# Startup bluetooth
+/bin/bash /usr/src/app/scan.sh
+
 # using local electron module instead of the global electron lets you
 # easily control specific version dependency between your app and electron itself.
 # the syntax below starts an X istance with ONLY our electronJS fired up,
