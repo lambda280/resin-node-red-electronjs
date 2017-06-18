@@ -54,10 +54,17 @@ COPY "$SOURCEFOLDER/app/package.json" ./
 
 # This install npm dependencies on the resin.io build server,
 # making sure to clean up the artifacts it creates in order to reduce the image size.
-RUN JOBS=MAX npm install -g node-red node-red-contrib-resinio \
-  node-red-contrib-camerapi node-red-contrib-bme280-rpi \
-  node-red-contrib-i2c node-red-contrib-noble \
-
+RUN JOBS=MAX npm install -g node-red \
+  node-red-contrib-resinio \
+  node-red-contrib-camerapi \
+  node-red-contrib-bme280-rpi \
+  node-red-contrib-i2c \
+  node-red-contrib-noble \
+  node-red-contrib-bigtimer \
+  node-red-contrib-http-auth0 \
+  node-red-contrib-aws-iot-hub \
+  node-red-contrib-openhab2 \
+  node-red-contrib-rfxcom \
   && npm i --production && npm cache clean && rm -rf /tmp/*
 
 # This will copy all files in our root to the working  directory in the container
