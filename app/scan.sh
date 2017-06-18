@@ -25,7 +25,7 @@ else
     FAILED=0
 fi
 
-echo "Test finished. App configured to not exit. Restart the app if you want to retest."
+echo "Bluetooth bringup finished."
 
 # Test result
 if [ $FAILED -eq 1 ]; then
@@ -33,8 +33,3 @@ if [ $FAILED -eq 1 ]; then
 else
     echo "TEST PASSED"
 fi
-
-# Don't exit the process
-while true; do
-    sleep 1
-done
