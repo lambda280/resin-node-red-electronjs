@@ -66,6 +66,7 @@ RUN JOBS=MAX npm install -g node-red \
   node-red-contrib-openhab2 \
   node-red-contrib-rfxcom \
   node-red-contrib-deduplicate \
+  node-red-node-watson \
   && npm i --production && npm cache clean && rm -rf /tmp/*
 
 # This will copy all files in our root to the working  directory in the container
